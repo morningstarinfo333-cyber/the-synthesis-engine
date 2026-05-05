@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Synthesis Engine - E-commerce Automation</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        
+        .hero {
+            text-align: center;
+            padding: 60px 20px;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            margin-bottom: 40px;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            color: #1a1a2e;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+        
+        .subtitle {
+            font-size: 1.25rem;
+            color: #555;
+            max-width: 600px;
+            margin: 0 auto 40px;
+        }
+        
+        .pain-points {
+            background: #f8f9fa;
+            border-radius: 15px;
+            padding: 30px;
+            margin: 40px 0;
+            text-align: left;
+        }
+        
+        .pain-points h2 {
+            color: #1a1a2e;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .pain-point {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 20px;
+            padding: 15px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        
+        .pain-point .icon {
+            font-size: 2rem;
+            margin-right: 15px;
+        }
+        
+        .pain-point h3 {
+            color: #333;
+            margin-bottom: 5px;
+        }
+        
+        .pain-point p {
+            color: #666;
+        }
+        
+        .offer {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px;
+            border-radius: 15px;
+            margin: 40px 0;
+            text-align: center;
+        }
+        
+        .offer h2 {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+        }
+        
+        .offer .price {
+            font-size: 3rem;
+            font-weight: 700;
+            margin: 20px 0;
+        }
+        
+        .process {
+            background: white;
+            border-radius: 15px;
+            padding: 40px;
+            margin: 40px 0;
+        }
+        
+        .process h2 {
+            color: #1a1a2e;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .step {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 25px;
+        }
+        
+        .step-number {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            margin-right: 20px;
+            flex-shrink: 0;
+        }
+        
+        .step h3 {
+            color: #333;
+            margin-bottom: 5px;
+        }
+        
+        .step p {
+            color: #666;
+        }
+        
+        .cta {
+            text-align: center;
+            margin: 40px 0;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: #ff6b6b;
+            color: white;
+            text-decoration: none;
+            padding: 20px 50px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            border-radius: 50px;
+            box-shadow: 0 10px 30px rgba(255,107,107,0.4);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(255,107,107,0.5);
+        }
+        
+        .social-proof {
+            background: #e8f5e9;
+            border-left: 5px solid #4caf50;
+            padding: 20px;
+            border-radius: 0 10px 10px 0;
+            margin: 30px 0;
+            text-align: center;
+            font-size: 1.1rem;
+            color: #2e7d32;
+        }
+        
+        .contact {
+            text-align: center;
+            padding: 30px;
+            color: white;
+        }
+        
+        .contact h3 {
+            margin-bottom: 10px;
+        }
+        
+        .contact a {
+            color: #ffd700;
+            text-decoration: none;
+        }
+        
+        .contact a:hover {
+            text-decoration: underline;
+        }
+        
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+            
+            .subtitle {
+                font-size: 1rem;
+            }
+            
+            .offer .price {
+                font-size: 2rem;
+            }
+            
+            .cta-button {
+                padding: 15px 30px;
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="hero">
+            <h1>Stop Doing Work a Computer Should Do</h1>
+            <p class="subtitle">I help e-commerce store owners automate the repetitive tasks eating their time — so you can focus on growth instead of operations.</p>
+            
+            <div class="pain-points">
+                <h2>Are These Eating Your Time?</h2>
+                
+                <div class="pain-point">
+                    <span class="icon">📧</span>
+                    <div>
+                        <h3>Customer Service</h3>
+                        <p>Answering the same questions 20x/day</p>
+                    </div>
+                </div>
+                
+                <div class="pain-point">
+                    <span class="icon">📦</span>
+                    <div>
+                        <h3>Inventory</h3>
+                        <p>Manually updating spreadsheets and stock levels</p>
+                    </div>
+                </div>
+                
+                <div class="pain-point">
+                    <span class="icon">🛒</span>
+                    <div>
+                        <h3>Abandoned Carts</h3>
+                        <p>Chasing lost sales one-by-one</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="offer">
+                <h2>My Offer</h2>
+                <p class="price">$1,000</p>
+                <p style="font-size: 1.2rem;">Automate 3 workflows in one week</p>
+            </div>
+            
+            <div class="process">
+                <h2>How It Works</h2>
+                
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div>
+                        <h3>Free Discovery Call (30 min)</h3>
+                        <p>We identify your biggest time-wasters</p>
+                    </div>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div>
+                        <h3>Custom Audit</h3>
+                        <p>I map exactly what to automate</p>
+                    </div>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div>
+                        <h3>Setup Week</h3>
+                        <p>Your automations go live</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="cta">
+                <a href="https://calendly.com/morningstar-info333/30min" class="cta-button">Book Free Discovery Call</a>
+            </div>
+            
+            <div class="social-proof">
+                <strong>Join 5+ store owners who've reclaimed 10+ hours/week</strong>
+            </div>
+        </div>
+        
+        <div class="contact">
+            <h3>The Synthesis Engine</h3>
+            <p>Morningstar | <a href="mailto:morningstar.info333@gmail.com">morningstar.info333@gmail.com</a></p>
+        </div>
+    </div>
+</body>
+</html>
